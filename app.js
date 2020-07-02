@@ -1,4 +1,4 @@
-const colors = ["red", "green", "blue"];
+const colors = ["red", "green", "blue", "black","orange"];
 const click = document.getElementById("btn");
 const body = document.getElementById("back");
 
