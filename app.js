@@ -1,9 +1,12 @@
 const colors = ["red", "green", "blue"];
 const click = document.getElementById("btn");
-const body = document.getElementById("body");
-const randomColor = colors[Math.floor(Math.random()*colors.length)]
+const body = document.getElementById("back");
 
-click.addEventListener("click", function(){
-    console.log(randomColor)
-    body.style.backgroundColor=randomColor
-})
+
+const newColor = function(){
+    const randomColor = colors[Math.floor(Math.random()*colors.length)];
+    console.log(randomColor);
+body.style.backgroundColor=randomColor
+}
+ click.addEventListener("click", newColor)
+
