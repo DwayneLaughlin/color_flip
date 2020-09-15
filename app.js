@@ -12,23 +12,22 @@ const newColor = function () {
   body.style.backgroundColor = randomColor;
 };
 
-
+;
 
 const newHex = function () {
-  
-  const hexString = [];
-  
-  
 
+  const hexString = []
+  
+  
   for (i = 0; i < 6; i++){
     const randomHex = hexColors[Math.floor(Math.random() * hexColors.length)];
-    const randomString = hexString.push(randomHex)
-    console.log(hexString);
-    
+    hexString.push(randomHex)
+
+    ;
   }
-  
-  return hexString;
-  body.style.backgroundColor = ("#" + hexString)
+  const hexJoin = hexString.join("")
+  console.log(hexString)
+  body.style.backgroundColor = "#" + hexJoin;
   
 }
 
