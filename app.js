@@ -5,8 +5,8 @@ const colors = [
   "blue",
   "indigo",
   "purple",
-  "black",
   "orange",
+  "violet"
 ];
 
 const hexColors = [
@@ -30,12 +30,18 @@ const hexColors = [
 
 const colorBtn = document.getElementById("btn");
 const hexColorBtn = document.getElementById("btn2");
+const copyBtn = document.getElementById("btn3");
 const body = document.getElementById("back");
 // functionality for regular colors
 const newColor = function () {
   const randomColor = colors[Math.floor(Math.random() * colors.length)];
   console.log(randomColor);
   body.style.backgroundColor = randomColor;
+
+  var col = document.createElement("p");
+  var colName = document.createTextNode(randomColor);
+  col.appendChild(colName);
+  document.body.appendChild(col)
 };
 
 
@@ -49,6 +55,11 @@ const newHex = function () {
   const hexJoin = hexString.join("");
   console.log(hexString);
   body.style.backgroundColor = "#" + hexJoin;
+
+  var p = document.createElement("p");
+  var name = document.createTextNode(hexJoin);
+  p.appendChild(name);
+  document.body.appendChild(p)
 };
 
 colorBtn.addEventListener("click", newColor);
