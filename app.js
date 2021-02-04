@@ -1,12 +1,12 @@
 const colors = [
-  "red",
-  "green",
-  "yellow",
-  "blue",
-  "indigo",
-  "purple",
-  "orange",
-  "violet"
+  "Red",
+  "Green",
+  "Yellow",
+  "Blue",
+  "Indigo",
+  "Purple",
+  "Orange",
+  "Violet"
 ];
 
 const hexColors = [
@@ -59,7 +59,8 @@ const newHex = function () {
   var p = document.createElement("p");
   var name = document.createTextNode(hexJoin);
   p.appendChild(name);
-  document.body.appendChild(p)
+  document.body.appendChild(p);
+  
 };
 
 colorBtn.addEventListener("click", newColor);
