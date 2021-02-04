@@ -38,6 +38,7 @@ const newColor = function () {
   console.log(randomColor);
   body.style.backgroundColor = randomColor;
 
+  //appends name of color to body
   var col = document.createElement("p");
   var colName = document.createTextNode(randomColor);
   col.appendChild(colName);
@@ -56,11 +57,11 @@ const newHex = function () {
   console.log(hexString);
   body.style.backgroundColor = "#" + hexJoin;
 
-  var p = document.createElement("p");
-  var name = document.createTextNode(hexJoin);
+//appends name of color to body
+  const p = document.createElement("p");
+  const name = document.createTextNode(hexJoin);
   p.appendChild(name);
   document.body.appendChild(p);
-  
 };
 
 colorBtn.addEventListener("click", newColor);
