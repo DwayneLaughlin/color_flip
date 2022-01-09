@@ -68,16 +68,20 @@ const newHex = function () {
 
 //appends name of color to body
   const p = document.createElement("p");
-  const name = document.createTextNode(hexJoin);
-  p.appendChild(name);
+  const colName = document.createTextNode(hexJoin);
+  p.appendChild(colName);
   document.body.appendChild(p);
-  return newHex
+  
+  function copy (){
+    navigator.clipboard.writeText(hexJoin)
+  }
+  copyBtn.addEventListener('click', function(){
+    copy();
+    alert("Added #" + hexJoin + " to your clipboard")
+  })
 };
 
-const copyButton = function (){
-  navigator.clipboard.writeText("hello")
-}
+
 
 colorBtn.addEventListener("click", newColor);
 hexColorBtn.addEventListener("click", newHex);
-copyBtn.addEventListener("click", copyButton)
