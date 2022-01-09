@@ -32,17 +32,26 @@ const colorBtn = document.getElementById("btn");
 const hexColorBtn = document.getElementById("btn2");
 const copyBtn = document.getElementById("btn3");
 const body = document.getElementById("back");
+
 // functionality for regular colors
 const newColor = function () {
+  
   const randomColor = colors[Math.floor(Math.random() * colors.length)];
-  console.log(randomColor);
+ 
   body.style.backgroundColor = randomColor;
 
-  //appends name of color to body
-  var col = document.createElement("p");
-  var colName = document.createTextNode(randomColor);
-  col.appendChild(colName);
-  document.body.appendChild(col)
+  
+  colors.push(randomColor)
+
+  // appends name of color to body
+  let col = document.getElementById("namespot")
+  col.innerHTML = ''
+      
+  var colName = document.createTextNode(colors[colors.length - 1]);
+  col.appendChild(colName)
+  var group = document.body.appendChild(colName)
+  console.log(group)
+  
 };
 
 
