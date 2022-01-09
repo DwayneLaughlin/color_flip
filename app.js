@@ -71,7 +71,13 @@ const newHex = function () {
   const name = document.createTextNode(hexJoin);
   p.appendChild(name);
   document.body.appendChild(p);
+  return newHex
 };
+
+const copyButton = function (){
+  navigator.clipboard.writeText("hello")
+}
 
 colorBtn.addEventListener("click", newColor);
 hexColorBtn.addEventListener("click", newHex);
+copyBtn.addEventListener("click", copyButton)
