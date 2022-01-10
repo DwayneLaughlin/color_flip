@@ -68,11 +68,9 @@ const newHex = function () {
   p.appendChild(colName);
   document.body.appendChild(p);
 
-  
-  copyBtn.addEventListener("click", function () {
-    navigator.clipboard.writeText("hello");
-    alert("Added #" + hexJoin + " to your clipboard");
-  });
+copyBtn.addEventListener("click", function (){
+  navigator.clipboard.writeText(hexJoin)
+});
 };
 
 colorBtn.addEventListener("click", newColor);
