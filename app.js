@@ -6,7 +6,7 @@ const colors = [
   "Indigo",
   "Purple",
   "Orange",
-  "Violet"
+  "Violet",
 ];
 
 const hexColors = [
@@ -35,25 +35,21 @@ const body = document.getElementById("back");
 
 // functionality for regular colors
 const newColor = function () {
-  
   const randomColor = colors[Math.floor(Math.random() * colors.length)];
- 
+
   body.style.backgroundColor = randomColor;
 
-  
-  colors.push(randomColor)
+  colors.push(randomColor);
 
   // appends name of color to body
-  let col = document.getElementById("namespot")
-  col.innerHTML = ''
-      
-  var colName = document.createTextNode(colors[colors.length - 1]);
-  col.appendChild(colName)
-  var group = document.body.appendChild(colName)
-  console.log(group)
-  
-};
+  let col = document.getElementById("namespot");
+  col.innerHTML = "";
 
+  var colName = document.createTextNode(colors[colors.length - 1]);
+  col.appendChild(colName);
+  var group = document.body.appendChild(colName);
+  console.log(group);
+};
 
 // functionality for random hex color
 const newHex = function () {
@@ -66,22 +62,18 @@ const newHex = function () {
   console.log(hexString);
   body.style.backgroundColor = "#" + hexJoin;
 
-//appends name of color to body
+  //appends name of color to body
   const p = document.createElement("p");
   const colName = document.createTextNode(hexJoin);
   p.appendChild(colName);
   document.body.appendChild(p);
+
   
-  function copy (){
-    navigator.clipboard.writeText(hexJoin)
-  }
-  copyBtn.addEventListener('click', function(){
-    copy();
-    alert("Added #" + hexJoin + " to your clipboard")
-  })
+  copyBtn.addEventListener("click", function () {
+    navigator.clipboard.writeText("hello");
+    alert("Added #" + hexJoin + " to your clipboard");
+  });
 };
-
-
 
 colorBtn.addEventListener("click", newColor);
 hexColorBtn.addEventListener("click", newHex);
